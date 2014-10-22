@@ -1,0 +1,14 @@
+---
+title: "Machine Learning Project"
+author: "bphillab"
+date: "October 21, 2014"
+output: html_document
+---
+
+I began my analysis by considering what data I have to work with and what I what the result of my analysis should be. In my first pass through the data I note a large amount of columns that appear to be superfluous or largely lacking. I omitted columns relating to identification such as name, date, id. I also omitted the large number of columns that are dominated by NA entries as there is insufficient data to give useful results.
+
+After removing results which were superfluous to the classification I considered what kinds of motion I was modeling. In the case of exercises I believe that the relative acceleration and speed of an appendage should be rather irrelevant and would instead emphasize the direction of the acceleration and velocity. I therefore computed and divided by the magnitude of each vector to reflect this.
+
+Having finally parsed the data into an appropriate form, I believed I was ready to start applying machine learning algorithms. In order to determine an appropriate algorithm I first noted that I wanted to classify and I expected that with an appropriate choice of tree sorting one could identify the class of exercise. I therefore chose the random forest approach for identifying class.
+
+I split the data into a training set and a test set. After training my data I tested it to get an approximate accuracy and found that it matched the test data with approximately 98% accuracy. Having gained confidence in my algorithm I applied my model to the diagnostic data and found that I did extraordinarily well.
